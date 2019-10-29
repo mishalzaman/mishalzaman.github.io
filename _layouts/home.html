@@ -5,11 +5,37 @@ layout: default
 {%- include header.html scrolly_nav=_sections -%}
 <!-- Main -->
 <div id="main">
-	{%- if page.content != "" -%}
-		{%- include section.html title=page.title photo=page.cover-photo photo-alt=page.cover-photo-alt auto-header=page.auto-header content=page.content -%}
-	{%- endif -%}
-	<!-- Sections -->
-	{%- for _section in _sections -%}
-		{%- include section.html title=_section.title photo=_section.cover-photo photo-alt=_section.cover-photo-alt auto-header=_section.auto-header content=_section.content -%}
-	{%- endfor -%}
+	<section id="intro" class="shade-one cover dark">
+		<div class="container"><img src="/assets/images/659w4vR.jpg" alt="example cover photo" class="back">
+		<header>
+			<h2 class="alt" style="text-align: center;">Hello!</h2>
+	  	</header>
+	  	</div>
+	</section>
+
+	<section id="about" class="shade-two">
+		<div class="container">
+			<p>My name is Mishal, and I am a software developer in Toronto. I have this little blog here to jot down things that I have learned, or are learning. <em>Or basically just general interests.</em> Anyway, check it out and let me know what you think. If you’re curious about something, send me a message.</p>
+	  	</div>
+	</section>
+
+	<section id="contact" class="shade-three">
+		<div class="container">
+			<header>
+				<h2>Contact</h2>
+			</header>
+			<form method="post" action="https://formspree.io/mishalzaman@gmail.com">
+				<div class="row">
+					<div class="6u 12u$(mobile)"><input type="text" name="name" placeholder="Name"></div>
+					<div class="6u$ 12u$(mobile)"><input type="text" name="email" placeholder="Email"></div>
+					<div class="12u$">
+					<textarea name="message" placeholder="Message"></textarea>
+					</div>
+					<div class="12u$">
+					<input type="submit" value="Send Message">
+					</div>
+				</div>
+			</form>
+		</div>
+	</section>
 </div>

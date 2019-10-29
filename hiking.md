@@ -1,9 +1,9 @@
 ---
-title: Graphics Programming
-subtitle: API
+title: Hiking
+subtitle: Outdoors
 layout: "default"
-icon: fa-cube
-order: 5
+icon: fa-hiking
+order: 2
 ---
 
 {%- assign _posts = site.posts | sort: 'date' -%}
@@ -12,7 +12,7 @@ order: 5
 <div id="main">
 	<!-- Posts List -->
     {%- for _post in _posts -%}
-        {% if _post.path contains 'graphics_programming' %}
+        {% if _post.path contains 'hiking' %}
             {%- capture _title -%}
                 <a href="{{- _post.url | absolute_url -}}">{{- _post.title -}}</a>
             {%- endcapture -%}
