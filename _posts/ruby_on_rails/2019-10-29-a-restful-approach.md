@@ -3,7 +3,7 @@ title: A RESTful Approach
 layout: post
 ---
 
-I was reading about an approach DHH takes when structuring his controllers in a RESTful way. He basically states that everytime they make a new action, they create a new controller. The controller would then only utilize RESTful CRUD actions such as `index`, `show`, `new`, `edit` etc. I thought this was an interesting approach. One that enforces seperations of concern by creating a more uniform controller structure.
+I recently read an article that explained how we can fully utlize a RESTful approach to structuring controllers. The main theme was the uniformaity of code, I.e. a controller should only be concerned with how it utlizes REST's CRUD actions to change the state of a process. Therefore creating a seperation of concern within the controllers themselves.
 
 ## How it works
 
@@ -12,7 +12,11 @@ Let's say we have a controller (`BooksController`). This controller handles the 
 That sounds great, but what if we wanted to enforce a strictly RESTful approach to this? Instead of having an action called `publish`, which does not fall under a REST CRUD action, we create a new controller for it. The new controller would be namespaced under `Books`.
 
 <pre><code class="ruby">class Books::PublishController < ApplicationController
-    def index
+    def create
+        ...
+    end
+
+    def edit
         ...
     end
 end
