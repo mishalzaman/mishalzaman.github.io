@@ -5,45 +5,203 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mishal Zaman</title>
   <style>
+    /* Base Styles */
     body {
-      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #002b36;
+      color: #eee8d5;
+      font-family: 'Fira Code', monospace;
+    }
+
+    .wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      width: 100%;
+      padding: 1rem;
+      box-sizing: border-box;
+    }
+
+    .container {
+      position: relative;
+      width: 100%;
+      max-width: 400px;
       text-align: center;
-      margin: 100px auto;
-      max-width: 600px;
+      background-color: #073642;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0, 43, 54, 0.6);
+      box-sizing: border-box;
+      margin-bottom: 2rem;
     }
 
     h1 {
-      font-size: 2.5rem;
+      font-size: 2rem;
       margin-bottom: 0.2em;
+      color: #b58900;
     }
 
     h2 {
-      font-size: 1.5rem;
-      color: #555;
+      font-size: 1.25rem;
+      color: #268bd2;
       margin-bottom: 1em;
     }
 
     a {
-      display: block;
-      margin: 0.5em 0;
-      color: #0366d6;
+      color: #2aa198;
       text-decoration: none;
     }
 
     a:hover {
       text-decoration: underline;
     }
+
+    p {
+      text-align: left;
+      line-height: 1.5;
+      padding: 0 1rem;
+      font-size: 1rem;
+    }
+
+    section {
+      border-bottom: 2px dotted #b58900;
+    }
+
+    section:last-child {
+      border-bottom: none;
+    }
+
+    .row {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .emoji {
+      width: 48px;
+      text-align: center;
+      border-right: 1px dotted #268bd2;
+      padding: 1rem;
+      font-size: 0.8rem;
+    }
+
+    .title {
+      border-bottom: 1px dotted #268bd2;
+      font-size: 0.9rem;
+      flex: 1;
+      text-align: left;
+    }
+
+    .header {
+      position: absolute;
+      left: -42px;
+      top: -18px;
+      background: #b58900;
+      padding: 8px;
+      border-radius: 6px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+      transform: rotate(-16deg);
+      font-size: 0.9rem;
+    }
+
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      padding: 1rem;
+    }
+
+    .link {
+      padding: 0.5rem 1rem;
+      display: inline-block;
+      background-color: #002b36;
+      border-radius: 4px;
+      transition: background-color 0.3s;
+    }
+
+    .link:hover {
+      background-color: #586e75;
+    }
+
+    /* Responsive Typography */
+    @media (min-width: 600px) {
+      h1 {
+        font-size: 2.5rem;
+      }
+
+      h2 {
+        font-size: 1.5rem;
+      }
+
+      p {
+        font-size: 1.125rem;
+      }
+    }
   </style>
 </head>
 <body>
-  <h1>Mishal Zaman</h1>
-  <h2>Senior Software Engineer</h2>
-
-  <a href="https://www.linkedin.com/in/mishal-zaman-84997426/" target="_blank">
-    LinkedIn
-  </a>
-  <a href="https://github.com/mishalzaman" target="_blank">
-    GitHub
-  </a>
+  <div class="wrapper">
+    <div class="container">
+      <h1>Mishal Zaman</h1>
+      <h2>Senior Software Engineer</h2>
+      <p>
+        Full stack developer with 8+ years of experience building reliable, scalable web applications using Rails, React, and TypeScript.
+      </p>
+      <p>
+        In my spare time, I enjoy delving deeper into the Ruby language, exploring its internals and writing small tools. I also tinker with graphics programming and shader development for fun.
+      </p>
+    </div>
+    <div class="container">
+      <div class="header">Open Source</div>
+      <section>
+        <div class="title row">
+          <div class="emoji">💎</div>
+          <a href="https://github.com/mishalzaman/Memo_TTL" target="_blank">Memo_TTL (WIP)</a>
+        </div>
+        <p>A Ruby gem for memoization with time-to-live functionality, using an LRU cache system.</p>
+      </section>
+      <section>
+        <div class="title row">
+          <div class="emoji">🖼️</div>
+          webgpu-image-editor (WIP)
+        </div>
+        <p>A WebGPU-powered image editor built with TypeScript. <i>Currently, work in progress.</i></p>
+      </section>
+      <section>
+        <div class="title row">
+          <div class="emoji">💎</div>
+          <a href="https://github.com/mishalzaman/terminal-rpg-ruby" target="_blank">Ruby Shell Game</a>
+        </div>
+        <p>A really basic shell based top down RPG game using Ruby.</p>
+      </section>
+      <section>
+        <div class="title row">
+          <div class="emoji">🔵➕➕</div>
+          <a href="https://github.com/mishalzaman/BaseDawnWebGPU" target="_blank">BaseDawnWebGPU</a>
+        </div>
+        <p>A C++ base for building applications in WebGPU using C++.</p>
+      </section>
+      <section>
+        <div class="title row">
+          <div class="emoji">🔵➕➕</div>
+          <a href="https://github.com/mishalzaman/Irrlicht-pathfinding-recast-detour" target="_blank">Irrlicht-pathfinding-recast-detour</a>
+        </div>
+        <p>A C++ wrapper for the Irrlicht game engine that adds pathfinding in 2D and 3D.</p>
+      </section>
+    </div>
+    <div class="container">
+      <div class="header">Social</div>
+      <div class="social-links">
+        <a class="link" href="https://www.linkedin.com/in/mishal-zaman-84997426/" target="_blank">LinkedIn</a>
+        <a class="link" href="https://github.com/mishalzaman" target="_blank">GitHub</a>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
