@@ -2,74 +2,80 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Mishal Zaman</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    /* Base Styles */
-    body {
+    * {
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, #2b0057, #4b0082);
+      color: #fff9db;
       min-height: 100vh;
       display: flex;
-      align-items: center;
       justify-content: center;
-      background-color: #002b36;
-      color: #eee8d5;
-      font-family: 'Fira Code', monospace;
+      align-items: center;
+      padding: 2rem;
     }
 
     .wrapper {
+      width: 100%;
+      max-width: 900px;
       display: flex;
       flex-direction: column;
-      align-items: center;
-      gap: 1rem;
-      width: 100%;
-      padding: 1rem;
-      box-sizing: border-box;
+      gap: 2rem;
     }
 
     .container {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 16px;
+      backdrop-filter: blur(12px);
+      padding: 2rem;
       position: relative;
-      width: 100%;
-      max-width: 400px;
-      text-align: center;
-      background-color: #073642;
-      border-radius: 12px;
-      box-shadow: 0 0 20px rgba(0, 43, 54, 0.6);
-      box-sizing: border-box;
-      margin-bottom: 2rem;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
     }
 
-    h1 {
-      font-size: 2rem;
-      margin-bottom: 0.2em;
-      color: #b58900;
+    .container h1 {
+      font-size: 2.5rem;
+      color: #ffeb3b;
     }
 
-    h2 {
-      font-size: 1.25rem;
-      color: #268bd2;
-      margin-bottom: 1em;
+    .container h2 {
+      font-size: 1.5rem;
+      color: #ffd60a;
+      margin-bottom: 1rem;
     }
 
-    a {
-      color: #b58900;
-      text-decoration: none;
+    .container p {
+      line-height: 1.6;
     }
 
-    a:hover {
-      text-decoration: underline;
+    .about p {
+      margin-bottom: 1rem;
     }
 
-    p {
-      text-align: left;
-      line-height: 1.5;
-      padding: 0 1rem;
-      font-size: 1rem;
+    .header {
+      position: absolute;
+      top: -18px;
+      left: 1rem;
+      background-color: #ffeb3b;
+      color: #2b0057;
+      padding: 0.4rem 1rem;
+      font-weight: 600;
+      font-size: 0.85rem;
+      border-radius: 6px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
     }
 
     section {
-      border-bottom: 2px dotted #b58900;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+      padding: 1rem 0;
     }
 
     section:last-child {
@@ -80,121 +86,107 @@
       display: flex;
       align-items: center;
       gap: 1rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
     }
 
-    .emoji {
-      width: 48px;
-      text-align: center;
-      padding: 1rem;
-      font-size: 0.8rem;
+    .row .emoji {
+      font-size: 1.5rem;
     }
 
-    .title {
-      border-bottom: 1px dotted #268bd2;
-      font-size: 0.9rem;
-      flex: 1;
-      text-align: left;
-      color: #b58900;
+    .row a {
+      color: #ffe066;
+      font-size: 1rem;
+      text-decoration: none;
+      transition: color 0.2s;
     }
 
-    .header {
-      position: absolute;
-      left: 5px;
-      top: -26px;
-      background: #b58900;
-      padding: 8px;
-      border-radius: 6px;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
-      transform: rotate(-8deg);
-      font-size: 0.9rem;
+    .row a:hover {
+      color: #ffff8d;
     }
 
     .social-links {
       display: flex;
-      justify-content: center;
       gap: 1rem;
       flex-wrap: wrap;
-      padding: 1rem;
+      margin-top: 1rem;
     }
 
     .link {
-      padding: 0.5rem 1rem;
-      display: inline-block;
-      background-color: #002b36;
-      border-radius: 4px;
-      transition: background-color 0.3s;
+      background: #37005a;
+      padding: 0.6rem 1.2rem;
+      border-radius: 8px;
+      color: #fff9db;
+      text-decoration: none;
+      font-weight: 500;
+      transition: background 0.3s;
     }
 
     .link:hover {
-      background-color: #586e75;
+      background: #6f42c1;
     }
 
-    /* Responsive Typography */
-    @media (min-width: 600px) {
-      h1 {
-        font-size: 2.5rem;
+    @media (max-width: 600px) {
+      .container h1 {
+        font-size: 2rem;
       }
 
-      h2 {
-        font-size: 1.5rem;
+      .container h2 {
+        font-size: 1.2rem;
       }
+    }
 
-      p {
-        font-size: 1.125rem;
-      }
+    hr {
+      border: none;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      margin: 1rem 0;
     }
   </style>
 </head>
 <body>
   <div class="wrapper">
-    <div class="container">
+    <div class="container about">
       <h1>Mishal Zaman</h1>
+      <hr/>
       <h2>Senior Software Engineer</h2>
-      <p>
-        Full stack developer with 8+ years of experience building reliable, scalable web applications using Rails, React, and TypeScript.
-      </p>
-      <p>
-        In my spare time, I enjoy delving deeper into the Ruby language, exploring its internals and writing small tools. I also tinker with graphics programming and shader development for fun.
-      </p>
+      <p>Seasoned full stack developer with over 8 years of hands-on experience architecting and delivering high-performance, scalable web applications using Rails, React, and TypeScript. I specialize in creating clean, maintainable code and intuitive user experiences, with a strong focus on performance, reliability, and developer ergonomics.</p>
+      <p>Outside of professional work, I’m passionate about the Ruby language—frequently exploring its internals, building custom tooling, and contributing to open source. I also enjoy experimenting with graphics programming and shader development, where I merge creativity with code to push the boundaries of what’s possible in the browser and beyond.</p>
     </div>
+
     <div class="container">
       <div class="header">Open Source</div>
       <section>
-        <div class="title row">
-          <div class="emoji">💎</div>
+        <div class="row">
           <a href="https://github.com/mishalzaman/Memo_TTL" target="_blank">Memo_TTL</a>
         </div>
         <p>A Ruby gem for memoization with time-to-live functionality, using an LRU cache system.</p>
       </section>
       <section>
-        <div class="title row">
-          <div class="emoji">🖼️</div>
-          <a href="https://mishalzaman.github.io/webgpu-image-editor-demo/" target="_blank">webgpu-image-editor (demo)</a>          
+        <div class="row">
+          <a href="https://mishalzaman.github.io/webgpu-image-editor-demo/" target="_blank">webgpu-image-editor (demo)</a>
         </div>
         <p>A WebGPU-powered image editor built with TypeScript. <i>Currently, work in progress.</i></p>
       </section>
       <section>
-        <div class="title row">
-          <div class="emoji">💎</div>
+        <div class="row">
           <a href="https://github.com/mishalzaman/terminal-rpg-ruby" target="_blank">Ruby Shell Game</a>
         </div>
-        <p>A really basic shell based top down RPG game using Ruby.</p>
+        <p>A really basic shell-based top-down RPG game using Ruby.</p>
       </section>
       <section>
-        <div class="title row">
-          <div class="emoji">🔵➕➕</div>
+        <div class="row">
           <a href="https://github.com/mishalzaman/BaseDawnWebGPU" target="_blank">BaseDawnWebGPU</a>
         </div>
         <p>A C++ base for building applications in WebGPU.</p>
       </section>
       <section>
-        <div class="title row">
-          <div class="emoji">🔵➕➕</div>
+        <div class="row">
           <a href="https://github.com/mishalzaman/Irrlicht-pathfinding-recast-detour" target="_blank">Irrlicht-pathfinding-recast-detour</a>
         </div>
         <p>A C++ wrapper for the Irrlicht game engine that adds pathfinding in 2D and 3D.</p>
       </section>
     </div>
+
     <div class="container">
       <div class="header">Social</div>
       <div class="social-links">
